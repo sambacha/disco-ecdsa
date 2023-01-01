@@ -26,7 +26,8 @@ ignored_error_codes = [
     'code-size',
 ]
 deny_warnings = false
-build_info = false
+build_info = true
+
 ffi = false
 sender = '0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38'
 tx_origin = '0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38'
@@ -39,15 +40,15 @@ block_timestamp = 1
 block_difficulty = 0
 block_prevrandao = '0x0000000000000000000000000000000000000000000000000000000000000000'
 memory_limit = 33554432
-extra_output = []
-extra_output_files = []
+extra_output = ['irOptimized', 'evm.assembly']
+extra_output_files = ['metadata']
 names = false
-sizes = false
-via_ir = false
+sizes = true
+via_ir = true
 no_storage_caching = false
-bytecode_hash = 'ipfs'
-cbor_metadata = true
-sparse_mode = false
+bytecode_hash = 'none'
+cbor_metadata = false
+sparse_mode = true
 
 [[profile.default.fs_permissions]]
 access = 'read'

@@ -1,4 +1,4 @@
-# [`disco-ecdsa`](#)
+# [`@disco3/signatures`](#)
 
 > v0.1.0
 
@@ -73,6 +73,37 @@ Assembly changes
             data := keccak256(ptr, 66)
         }
     }
+```
+
+```plantuml
+@startuml
+
+' -- classes --
+
+
+abstract ECDSA {
+    ' -- inheritance --
+
+    ' -- usingFor --
+
+    ' -- vars --
+
+    ' -- methods --
+	-🔍_throwError()
+	#🔍tryRecover()
+	#🔍recover()
+	#🔍tryRecover()
+	#🔍recover()
+	#🔍tryRecover()
+	#🔍recover()
+	#🔍toEthSignedMessageHash()
+	#🔍toEthSignedMessageHash()
+	#🔍toTypedDataHash()
+
+}
+' -- inheritance / usingFor --
+
+@enduml
 ```
 
  ## License
