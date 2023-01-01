@@ -1,4 +1,4 @@
-# `[disco-ecdsa](#)` 
+# [`disco-ecdsa`](#)
 
 > v0.1.0
 
@@ -75,5 +75,20 @@ Assembly changes
     }
 ```
 
-## License
+ ## License
+ 
+ Licensed under either of
 
+ * Universal Permissive License 1.0
+   ([LICENSE-UPL](LICENSE-UPL) or https://opensource.org/licenses/UPL)
+
+ * MIT License
+   ([LICENSE-MIT](LICENSE-MIT) or https://opensource.org/licenses/MIT)
+ 
+ at your option.
+
+ ### Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in the work by you, as defined in the Universal Permissive License v 1.0 
+license, shall be dual licensed as above, without any additional terms or conditions.
