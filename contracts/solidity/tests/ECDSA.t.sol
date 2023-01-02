@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "../ECDSA.sol";
+import "../ECDSA_V01.sol";
 
 contract ECDSATest {
     // solhint-disable-next-line func-name-mixedcase
