@@ -1,6 +1,6 @@
 pragma solidity ^0.8.4;
 
-/**
+/*
  * {@link https://entethalliance.github.io/crosschain-interoperability/draft_crosschain_techspec_messaging.html }
  */
 
