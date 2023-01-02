@@ -2,8 +2,7 @@
 
 pragma solidity ^0.8.17 <0.9.0;
 
-/**
- * SignatureEncoding
+/*
  * {@link https://entethalliance.github.io/crosschain-interoperability/draft_crosschain_techspec_messaging.html }
  *
  */
