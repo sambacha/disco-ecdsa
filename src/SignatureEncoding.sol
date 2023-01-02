@@ -1,8 +1,14 @@
-pragma solidity ^0.8.4;
+/// SPDX-License-Identifer: UPL or MIT
+
+pragma solidity ^0.8.17 <0.9.0;
 
 /**
+ * SignatureEncoding
  * {@link https://entethalliance.github.io/crosschain-interoperability/draft_crosschain_techspec_messaging.html }
+ *
  */
+
+/// @title SignatureEncoding
 
 contract SignatureEncoding {
     uint256 public constant ECDSA_SIGNATURE = 1;
@@ -21,10 +27,14 @@ contract SignatureEncoding {
     }
 
     /**
-     * Decode a signature blob.
+     *
+     *  ✓ decodeSignature
+     * 
+     *  Decode a signature blob.
      *
      * @param _signatures Encoded signatures.
      * @return Signture object.
+     * 
      */
     function decodeSignature(bytes calldata _signatures)
         internal
@@ -33,7 +43,7 @@ contract SignatureEncoding {
     {
         (
             ,
-            /* Skip offset of dynamic type */
+        /* Skip offset of dynamic type */
             uint256 sigType
         ) = abi.decode(_signatures, (uint256, uint256));
         require(sigType == ECDSA_SIGNATURE, "Signature unknown type");
