@@ -2,9 +2,9 @@
 // OpenZeppelin Contracts (last updated v4.8.0) (utils/cryptography/ECDSA.sol)
 // Optimized ECDSA 
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
-import * as { Strings } from "./Strings.sol";
+import  "./Strings_V01.sol";
 
 /**
  * @dev Elliptic Curve Digital Signature Algorithm (ECDSA) operations.

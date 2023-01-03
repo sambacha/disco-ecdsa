@@ -1,7 +1,12 @@
 # -*- mode: gitignore; -*-
+package-lock.json
+yarn.lock
 /out
 cache/
 artifacts/
+dist/
+build/
+output/
 logs
 *.log
 !/broadcast

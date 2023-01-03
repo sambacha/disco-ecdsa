@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
-import "../ECDSA.sol";
+import "../ECDSA_V01.sol";
 
 contract ECDSATest {
     // solhint-disable-next-line func-name-mixedcase
