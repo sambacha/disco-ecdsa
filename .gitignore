@@ -1,4 +1,6 @@
 # -*- mode: gitignore; -*-
+/.cache/solidity*
+.cache/solidity-files-cache.json
 package-lock.json
 yarn.lock
 /out

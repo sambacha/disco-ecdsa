@@ -3,12 +3,15 @@ src = 'src'
 test = 'test'
 script = 'script'
 out = 'out'
-libs = ['lib']
-remappings = []
+libs = ['lib', 'node_modules']
+remappings = [
+    '@prb/test/=node_modules/@prb/test/src/',
+     'ds-test/=lib/ds-test/src/',
+]
 auto_detect_remappings = true
 libraries = []
 cache = true
-cache_path = 'cache'
+cache_path = '.cache'
 broadcast = 'broadcast'
 allow_paths = []
 include_paths = []
@@ -21,17 +24,23 @@ offline = false
 optimizer = true
 optimizer_runs = 200
 verbosity = 0
+# Ignored Error codes
+# 2018 Function state mutability can be restricted to pure
+# 3420 Source file does not specify required compiler version
+# 3716 Multiple SPDX license identifiers found in source file
 ignored_error_codes = [
-    'license',
-    'code-size',
+  1878,
+  2018,
+  3420,
+  3716,
 ]
 deny_warnings = false
 build_info = true
 
 ffi = false
-sender = '0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38'
-tx_origin = '0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38'
 initial_balance = '0xffffffffffffffffffffffff'
+sender = '0xafFEaFFEAFfeAfFEAffeaFfEAfFEaffeafFeAFfE'
+tx_origin = '0xAaaaAaAAaaaAAaAAaAaaaaAAAAAaAaaaAaAaaAA0'
 block_number = 1
 gas_limit = 9223372036854775807
 block_base_fee_per_gas = 0
@@ -39,7 +48,7 @@ block_coinbase = '0x0000000000000000000000000000000000000000'
 block_timestamp = 1
 block_difficulty = 0
 block_prevrandao = '0x0000000000000000000000000000000000000000000000000000000000000000'
-memory_limit = 33554432
+memory_limit = 33_554_432
 extra_output = ['irOptimized', 'evm.assembly']
 extra_output_files = ['metadata']
 names = false
@@ -70,6 +79,12 @@ single_line_statement_blocks = 'preserve'
 variable_override_spacing = true
 wrap_comments = false
 ignore = []
+
+[profile.ci]
+optimizer = false
+fuzz_runs = 4_069
+force = true
+verbosity = 4
 
 [fuzz]
 runs = 256
