@@ -21,8 +21,19 @@ gas_reports = ['*']
 gas_reports_ignore = []
 auto_detect_solc = true
 offline = false
+
+# compiler settings
+build_info = false
+verbosity = 2
+via_ir = true
+revert_strings = "verboseDebug"
+
 optimizer = true
-optimizer_runs = 200
+optimizer_runs = 1_337
+# this may need to be uncommented if viaIR has issues
+optimizerSteps = ''
+
+
 verbosity = 0
 # Ignored Error codes
 # 2018 Function state mutability can be restricted to pure
@@ -53,7 +64,7 @@ extra_output = ['irOptimized', 'evm.assembly']
 extra_output_files = ['metadata']
 names = false
 sizes = true
-via_ir = true
+
 no_storage_caching = false
 bytecode_hash = 'none'
 cbor_metadata = false
