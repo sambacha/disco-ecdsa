@@ -5,8 +5,8 @@ script = 'script'
 out = 'out'
 libs = ['lib', 'node_modules']
 remappings = [
-    '@prb/test/=node_modules/@prb/test/src/',
-     'ds-test/=lib/ds-test/src/',
+	'@prb/test/=node_modules/@prb/test/src/',
+	'ds-test/=lib/ds-test/src/',
 ]
 auto_detect_remappings = true
 libraries = []
@@ -26,24 +26,22 @@ offline = false
 build_info = false
 verbosity = 2
 via_ir = true
-revert_strings = "verboseDebug"
+revert_strings = "debug"
 
 optimizer = true
 optimizer_runs = 1_337
 # this may need to be uncommented if viaIR has issues
 optimizerSteps = ''
 
-
-verbosity = 0
 # Ignored Error codes
 # 2018 Function state mutability can be restricted to pure
 # 3420 Source file does not specify required compiler version
 # 3716 Multiple SPDX license identifiers found in source file
 ignored_error_codes = [
-  1878,
-  2018,
-  3420,
-  3716,
+	1878,
+	2018,
+	3420,
+	3716,
 ]
 deny_warnings = false
 build_info = true
@@ -78,19 +76,6 @@ path = 'out'
 chains = 'all'
 endpoints = 'all'
 
-[fmt]
-line_length = 120
-tab_width = 4
-bracket_spacing = false
-int_types = 'long'
-multiline_func_header = 'attributes_first'
-quote_style = 'double'
-number_underscore = 'preserve'
-single_line_statement_blocks = 'preserve'
-variable_override_spacing = true
-wrap_comments = false
-ignore = []
-
 [profile.ci]
 optimizer = false
 fuzz_runs = 4_069
@@ -113,4 +98,3 @@ call_override = false
 dictionary_weight = 80
 include_storage = true
 include_push_bytes = true
-
