@@ -29,7 +29,6 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: extractions/setup-just@v1
       - name: Install Foundry
         uses: onbjerg/foundry-toolchain@v1
         with:
