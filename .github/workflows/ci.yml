@@ -29,14 +29,14 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: extractions/setup-just@v1
       - name: Install Foundry
         uses: onbjerg/foundry-toolchain@v1
         with:
           version: nightly
-      - name: Run Tests
-        id: dumpbuild
-        run: just dumpbuild
+
+      - name: Run Install
+        id: install
+        run: forge install
         
       - name: Run Tests
         id: forge_tests
