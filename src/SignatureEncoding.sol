@@ -1,11 +1,10 @@
 /// SPDX-License-Identifer: UPL or MIT
 
-pragma solidity ^0.8.17 <0.9.0;
+pragma solidity ^0.8.17;
 
-/**
+/*
  * SignatureEncoding
  * {@link https://entethalliance.github.io/crosschain-interoperability/draft_crosschain_techspec_messaging.html }
- *
  */
 
 /// @title SignatureEncoding
