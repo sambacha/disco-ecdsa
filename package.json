@@ -1,12 +1,16 @@
 {
   "name": "@disco3/signatures",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "description": "Gas and Size Optimized ECDSA Solidity Contracts and Signature adjacent contracts",
   "files": [
     "src/*",
     "contracts/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "check": "npx prettier --plugin=prettier-plugin-solidity --config .prettierrc.js -c '**/*.sol'",
+    "fmt": "npx prettier --plugin=prettier-plugin-solidity --config .prettierrc.js --write '**/*.sol'",
+    "test": "forge test -vvvv"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sambacha/disco-ecdsa.git"
@@ -23,15 +27,19 @@
   },
   "homepage": "https://github.com/sambacha/disco-ecdsa#readme",
   "devDependencies": {
+    "@prb/test": "^0.2.1",
+    "@ethersproject/abi": "^5.0.0",
+    "@ethersproject/bytes": "^5.0.0",
+    "@ethersproject/providers": "^5.0.0",
     "@typechain/ethers-v5": "^10.2.0",
     "@types/node": "^16.18.11",
     "ethers": "^5.7.2",
-    "prettier": "^2.8.1",
-    "prettier-config-solidity": "^1.9.1",
-    "prettier-plugin-solidity": "1.0.0-dev.22",
+    "prettier": "^2.8.3",
+    "prettier-plugin-solidity": "^1.1.1",
     "ts-node": "^10.9.1",
     "tslib": "^2.4.1",
     "typechain": "^8.1.1",
-    "typescript": "^4.6.3"
-  }
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {}
 }

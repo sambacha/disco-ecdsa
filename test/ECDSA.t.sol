@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 import {DSTestPlus} from "./utils/DSTestPlus.sol";
 
-import {ECDSA} from "../utils/ECDSA.sol";
+import {ECDSA} from "../src/ECDSA_V01.sol";
 
 contract ECDSATest is DSTestPlus {
     using ECDSA for bytes32;

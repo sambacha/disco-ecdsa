@@ -1,10 +1,10 @@
-// SPDX-License-Identifier: MIT
+/// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.8.0) (utils/cryptography/SignatureChecker.sol)
 
 pragma solidity ^0.8.0;
 
-import "./ECDSA.sol";
-import "../../interfaces/IERC1271.sol";
+import "../src/ECDSA_V01.sol";
+import "./IERC1271.sol";
 
 /**
  * @dev Signature verification helper that can be used instead of `ECDSA.recover` to seamlessly support both ECDSA

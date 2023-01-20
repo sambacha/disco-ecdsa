@@ -10,8 +10,7 @@ import {Hevm} from "./Hevm.sol";
 contract DSTestPlus is DSTest {
     Hevm internal constant hevm = Hevm(HEVM_ADDRESS);
 
-    address internal constant DEAD_ADDRESS =
-        0xDeaDbeefdEAdbeefdEadbEEFdeadbeEFdEaDbeeF;
+    address internal constant DEAD_ADDRESS = 0xDeaDbeefdEAdbeefdEadbEEFdeadbeEFdEaDbeeF;
 
     string private checkpointLabel;
     uint256 private checkpointGasLeft = 1; // Start the slot warm.
@@ -61,10 +60,7 @@ contract DSTestPlus is DSTest {
         // Subtract 100 to account for the warm SLOAD in startMeasuringGas.
         uint256 gasDelta = checkpointGasLeft - checkpointGasLeft2 - 100;
 
-        emit log_named_uint(
-            string(abi.encodePacked(checkpointLabel, " Gas")),
-            gasDelta
-        );
+        emit log_named_uint(string(abi.encodePacked(checkpointLabel, " Gas")), gasDelta);
     }
 
     function fail(string memory err) internal virtual {
@@ -141,10 +137,7 @@ contract DSTestPlus is DSTest {
         }
     }
 
-    function assertUintArrayEq(uint256[] memory a, uint256[] memory b)
-        internal
-        virtual
-    {
+    function assertUintArrayEq(uint256[] memory a, uint256[] memory b) internal virtual {
         require(a.length == b.length, "LENGTH_MISMATCH");
 
         for (uint256 i = 0; i < a.length; i++) {
