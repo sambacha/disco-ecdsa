@@ -1,6 +1,6 @@
 {
   "name": "@disco3/signatures",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Gas and Size Optimized ECDSA Solidity Contracts and Signature adjacent contracts",
   "files": [
     "src/*",
